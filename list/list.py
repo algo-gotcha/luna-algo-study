@@ -28,11 +28,10 @@ class DoublyLinkedList:
 			self.tail = self.head
 		
 		else:
-			new = Node(data)
-
-			self.tail.next = new
-			new.prev = self.tail
-			self.tail = new
+			new_node = Node(data)
+			self.tail.next = new_node
+			new_node.prev = self.tail
+			self.tail = new_node
 		self.len += 1
 		
 
