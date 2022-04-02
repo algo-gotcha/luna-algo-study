@@ -45,9 +45,11 @@ class DoublyLinkedList:
 		return to_pop
 	
 	def find_by_index(self, index:int) -> Node | None:
-		node:Node = self.head
 		if self.len <= index + 1:
 			return ErrorCase("index out of range", "그런 데이터는 없습니다.").says()
+		
+		node:Node = self.head
+		
 		if self.len // 2 > index:
 			for _ in range(index):
 				node = node.next
