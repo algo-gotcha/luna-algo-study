@@ -25,7 +25,7 @@ class DoublyLinkedList:
 		
 		else:
 			new = Node(data)
-			
+
 			self.tail.next = new
 			new.prev = self.tail
 			self.tail = new
@@ -44,8 +44,13 @@ class DoublyLinkedList:
 		node = self.head
 		if self.len <= index + 1:
 			return ErrorCase("index out of range", "그런 데이터는 없습니다.").says()
-		for _ in range(index):
-			node = node.next
+		if self.len // 2 > index:
+			for _ in range(index):
+				node = node.next
+		else:
+			node = self.tail
+			for _ in range(index):
+				node = node.prev
 		return node
 
 	def to_array(self):
