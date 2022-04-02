@@ -1,28 +1,30 @@
+
+
 class Node:
-	def __init__(self, data, prev=None,  next=None) -> None:
-		self.prev = prev
-		self.data = data
-		self.next = next
+	def __init__(self, data:any, prev=None,  next=None) -> None:
+		self.data:any = data
+		self.prev:Node = prev
+		self.next:Node = next
 
 class DoublyLinkedList:
-	def __init__(self, data=None):
+	def __init__(self, data:any=None) -> None:
 		if data is None:
-			self.head = None
-			self.len = 0
+			self.head:Node = None
+			self.len:int = 0
 		else:
-			self.head = Node(data)
-			self.len = 1
-		self.tail = self.head
+			self.head:Node = Node(data)
+			self.len:int = 1
+		self.tail:Node = self.head
 	
-	def describe(self):
-		node = self.head
+	def describe(self) -> None:
+		node:Node = self.head
 		print(f"이 리스트의 길이는 {self.len}입니다.")
 
 		while node:
 			print(node.data)
 			node = node.next
 	
-	def push(self, data):
+	def push(self, data) -> None:
 		if self.head == None:
 			self.head = Node(data)
 			self.tail = self.head
@@ -35,7 +37,7 @@ class DoublyLinkedList:
 		self.len += 1
 		
 
-	def pop(self):
+	def pop(self) -> Node:
 		to_pop = self.tail.prev.next
 		to_tail = self.tail.prev
 		self.tail.prev.next = None
@@ -43,8 +45,8 @@ class DoublyLinkedList:
 		self.len -= 1
 		return to_pop
 	
-	def find_by_index(self, index):
-		node = self.head
+	def find_by_index(self, index:int) -> Node | None:
+		node:Node = self.head
 		if self.len <= index + 1:
 			return ErrorCase("index out of range", "그런 데이터는 없습니다.").says()
 		if self.len // 2 > index:
@@ -56,7 +58,7 @@ class DoublyLinkedList:
 				node = node.prev
 		return node
 
-	def to_array(self):
+	def to_array(self) -> Node:
 		node = self.head
 		result = []
 		while node:
@@ -64,7 +66,7 @@ class DoublyLinkedList:
 			node = node.next
 		return result
 
-	def insert(self, node, data):
+	def insert(self, node:Node, data:any) -> None:
 		if node == None:
 			return ErrorCase("no data", "node를 넣어주세요").says()
 		new_node = Node(data)
@@ -82,10 +84,10 @@ class DoublyLinkedList:
 			new_node.prev = node.prev
 		self.len += 1
 	
-	def update(self, to_update_node, data):
+	def update(self, to_update_node:Node, data:any) -> None:
 		to_update_node.data = data
 	
-	def delete(self, to_delete_node):
+	def delete(self, to_delete_node) -> None:
 		to_delete_node.prev.next = to_delete_node.next
 		to_delete_node.next.prev = to_delete_node.prev
 		to_delete_node.prev = None
@@ -95,17 +97,17 @@ class DoublyLinkedList:
 		self.len -= 1
 
 class ErrorCase:
-	def __init__(self, case, description):
-		self.case = case
-		self.description = description
+	def __init__(self, case: str, description: str) -> None:
+		self.case:str = case
+		self.description:str = description
 	
-	def says(self):
+	def says(self) -> None:
 		print(f"[{self.case}] {self.description}")
 
-def test(assert_data, description="결과가 잘 나왔는가 ?"):
+def test(assert_data:bool, description:str="결과가 잘 나왔는가 ?") -> None:
 	print(f"[TEST] {description} {assert_data} ")
 
-def pretty_print(to_print):
+def pretty_print(to_print:str) -> None:
 	print(f" * * * {to_print} * * * ")
 
 def main():
