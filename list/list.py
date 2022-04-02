@@ -5,10 +5,14 @@ class Node:
 		self.next = next
 
 class DoublyLinkedList:
-	def __init__(self, data):
-		self.head = Node(data)
+	def __init__(self, data=None):
+		if data is None:
+			self.head = None
+			self.len = 0
+		else:
+			self.head = Node(data)
+			self.len = 1
 		self.tail = self.head
-		self.len = 1
 	
 	def describe(self):
 		node = self.head
@@ -109,7 +113,8 @@ def main():
 	print("hello world")
 
 	pretty_print("나와라 민욱햄")
-	new_list = DoublyLinkedList("황민욱")
+	new_list = DoublyLinkedList()
+	new_list.push("황민욱")
 	new_list.describe()
 	print()
 
