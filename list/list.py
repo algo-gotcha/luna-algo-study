@@ -38,10 +38,9 @@ class DoublyLinkedList:
 		
 
 	def pop(self) -> Node:
-		to_pop = self.tail.prev.next
-		to_tail = self.tail.prev
-		self.tail.prev.next = None
-		self.tail = to_tail
+		to_pop = self.tail
+		self.tail = self.tail.prev
+		self.tail.next = None
 		self.len -= 1
 		return to_pop
 	
@@ -99,7 +98,7 @@ class DoublyLinkedList:
 class ErrorCase:
 	def __init__(self, case: str, description: str) -> None:
 		self.case:str = case
-		self.description:str = description
+		self.description = description
 	
 	def says(self) -> None:
 		print(f"[{self.case}] {self.description}")
