@@ -121,8 +121,10 @@ class BST:
 
 		return result
 		
-
-
+def pretty_print(to_print:str) -> None:
+	print()
+	print(f" * * * {to_print} * * * ")
+	print()
 
 def main():
 	root = BinaryTreeNode(50)
@@ -136,7 +138,7 @@ def main():
 		bs_tree.insert(root, BinaryTreeNode(50 + 10 * i + 1))
 		bs_tree.insert(root, BinaryTreeNode(50 + 10 * i - 1))
 
-	print(f" * * * initial tree * * * ")
+	pretty_print("initial tree")
 
 	result = bs_tree.to_list(root, [])
 	print(result)
@@ -144,17 +146,22 @@ def main():
 
 	removed = bs_tree.remove(root, None, 40)
 	print(f"removed is {removed.data}")
-	print(f" * * * after remove tree * * * ")
+	pretty_print("after remove tree")
 
 	result = bs_tree.to_list(root, [])
 	print(result)
 	print(40 not in result)
 
-	to_update = bs_tree.find_node(root, 21)
-	print(to_update.data)
-	to_update.data = 99
-	result = bs_tree.to_list(root, [])
-	print(result)
+	#to_update = bs_tree.find_node(root, 21)
+	#bs_tree.print(to_update)
+	#print(to_update.data)
+	#to_update.data = 99
+	#result = bs_tree.to_list(root, [])
+	#print(result)
+
+	pretty_print("print partial")
+	to_print = bs_tree.find_node(root, 10)
+	bs_tree.print(to_print)
 
 
 
