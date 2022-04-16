@@ -12,11 +12,9 @@ class BST:
 		if root:
 			self.root = root
 			self.len = 1
-			self.depth = 1
 		else:
 			self.root = BinaryTreeNode(None)
 			self.len = 0
-			self.depth = 0
 
 	def insert(self, node, child) -> None:
 		if node.data == child.data:
@@ -151,6 +149,12 @@ def main():
 	result = bs_tree.to_list(root, [])
 	print(result)
 	print(40 not in result)
+
+	to_update = bs_tree.find_node(root, 21)
+	print(to_update.data)
+	to_update.data = 99
+	result = bs_tree.to_list(root, [])
+	print(result)
 
 
 
