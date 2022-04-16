@@ -38,7 +38,7 @@ class BST:
 		
 
 
-	def search(self, node, data) -> None:
+	def find_node(self, node, data) -> None:
 		# root node를 안넣으면 어떻게 되지?
 		if node is None:
 			return None
@@ -46,19 +46,19 @@ class BST:
 		if node.data == data:
 			return node
 		if node.data > data:
-			return self.search(node.left, data)
+			return self.find_node(node.left, data)
 		if node.data < data:
-			return self.search(node.right, data)
+			return self.find_node(node.right, data)
 	
 
-	def search_min_node(self, node):
+	def find_min_node(self, node):
 		if node is None:
 			return None
 
 		if node.left is None:
 			return node
 		else:
-			return self.search_min_node(node.left)
+			return self.find_min_node(node.left)
 
 
 	def remove(self, node, parent, target_data):
@@ -82,7 +82,7 @@ class BST:
 
 			else:
 				if node.left and node.right:
-					min_node = self.search_min_node(node.right)
+					min_node = self.find_min_node(node.right)
 					removed = self.remove(node, None, min_node.data)
 					node.data = min_node.data
 				else:
