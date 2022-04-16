@@ -144,8 +144,8 @@ def main():
 	print(result)
 	print(40 in result)
 
-	bs_tree.remove(root, None, 40)
-
+	removed = bs_tree.remove(root, None, 40)
+	print(f"removed is {removed.data}")
 	print(f" * * * after remove tree * * * ")
 
 	result = bs_tree.to_list(root, [])
