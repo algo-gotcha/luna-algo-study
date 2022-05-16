@@ -5,10 +5,18 @@
 #				return 1
 #	return 0
 
+#def solution(arr, n):
+#	numbers = [100 - n for n in range(101)]
+#	for a in arr:
+#		if numbers[a] != 50 and numbers[a] in arr:
+#			return 1
+#	return 0
+
 def solution(arr, n):
-	numbers = [100 - n for n in range(101)]
+	hash = {i : 0 for i in arr}
 	for a in arr:
-		if numbers[a] != 50 and numbers[a] in arr:
+		hash[a] += 1
+		if a != 50 and hash.get(100 - a, 0) > 0:
 			return 1
 	return 0
 
