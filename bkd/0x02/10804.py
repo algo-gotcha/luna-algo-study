@@ -1,13 +1,14 @@
-ranges = [tuple(map(int, input().split())) for _ in range(1)]
+import sys
 
-cards = [i for i in range(1, 21)]
+input = sys.stdin.readline
 
-result = cards[:]
-for idx in ranges:
-	if idx[0] != idx[1]:
-		result = result[:idx[0]-1] + result[idx[0]-1:idx[1]] + result[idx[1]:]
+card = list(range(1, 21))
 
-for number in result:
-	print(number, end=' ')
+for _ in range(10):
+	i, j = map(int, input().split())
+	reverse_card = card[i-1:j]
+	card = card[:i-1] + reverse_card[::-1] + card[j:]
+
+print(*card)
 
 
