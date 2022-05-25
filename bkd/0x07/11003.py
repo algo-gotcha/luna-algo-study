@@ -1,14 +1,18 @@
 import sys
+from collections import deque
 
 loop, gap = map(int, sys.stdin.readline().split())
 
 numbers = list(map(int, sys.stdin.readline().split()))
 
-for i, _ in enumerate(numbers):
-	start_index = i - gap + 1
-	if start_index < 0:
-		start_index = 0
-	
-	print(min(numbers[start_index:i+1]), end=' ')
+mins = deque()
+
+for i in range(loop):
+	while mins and mins[-1] > numbers[i]:
+		mins.pop()
+	mins.append(numbers[i])
+	if i >= gap and mins[0] == numbers[i - gap]:
+		mins.popleft()
+	print(mins[0], end=' ')
 
 
