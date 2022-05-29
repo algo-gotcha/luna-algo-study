@@ -49,6 +49,7 @@ while q:
                     q.append((k, (nx, ny)))
     # if k == 'J':
     #     count += 1
+        init_info['result'] = (nx, ny)
         print()
         print(f"k: {k}, count : {count}")
         for m in maze:
