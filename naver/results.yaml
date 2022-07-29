@@ -1,0 +1,259 @@
+Compilation successful.
+
+TestVerifyRootLevelCouldBeUnmarshalled
+OK
+
+TestVerifyBasePathIsCorrect
+OK
+
+TestVerifyEndpointWithoutIDIsCorrect
+OK
+
+TestVerifyGetOnOrdersIsDefined
+OK
+
+TestVerifyPostOnOrdersIsDefined
+OK
+
+TestVerifyEndpointWithIDIsCorrect
+OK
+
+TestVerifyGetOnOrdersWithIDIsDefined
+Output (stderr):
+openapi_tests_helpers.go:149: 
+Error Trace:	openapi_tests_helpers.go:149
+            				openapi_test.go:44
+Error:      	Expected value not to be nil.
+Test:       	TestVerifyGetOnOrdersWithIDIsDefined
+Messages:   	GET method for endpoint with ID should be defined
+WRONG ANSWER
+
+TestVerifyGet404ResponseCodeOnOrdersWithIDIsDefined
+Output (stderr):
+openapi_tests_helpers.go:149: 
+Error Trace:	openapi_tests_helpers.go:149
+            				openapi_test.go:49
+Error:      	Expected value not to be nil.
+Test:       	TestVerifyGet404ResponseCodeOnOrdersWithIDIsDefined
+Messages:   	GET method for endpoint with ID should be defined
+WRONG ANSWER
+
+TestVerifyGet200ResponseCodeOnOrdersWithIDIsDefined
+Output (stderr):
+openapi_tests_helpers.go:149: 
+Error Trace:	openapi_tests_helpers.go:149
+            				openapi_test.go:55
+Error:      	Expected value not to be nil.
+Test:       	TestVerifyGet200ResponseCodeOnOrdersWithIDIsDefined
+Messages:   	GET method for endpoint with ID should be defined
+WRONG ANSWER
+
+TestVerifyPut404ResponseCodeOnOrdersWithIDIsDefined
+Output (stderr):
+openapi_tests_helpers.go:168: 
+Error Trace:	openapi_tests_helpers.go:168
+            				openapi_test.go:62
+Error:      	Expected value not to be nil.
+Test:       	TestVerifyPut404ResponseCodeOnOrdersWithIDIsDefined
+Messages:   	404 response code should be defined
+WRONG ANSWER
+
+TestVerifyPut200ResponseCodeOnOrdersWithIDIsDefined
+Output (stderr):
+openapi_tests_helpers.go:175: 
+Error Trace:	openapi_tests_helpers.go:175
+            				openapi_test.go:68
+Error:      	Expected value not to be nil.
+Test:       	TestVerifyPut200ResponseCodeOnOrdersWithIDIsDefined
+Messages:   	200 response code should be defined
+WRONG ANSWER
+
+TestVerifyDelete404ResponseCodeOnOrdersWithIDIsDefined
+Output (stderr):
+openapi_tests_helpers.go:168: 
+Error Trace:	openapi_tests_helpers.go:168
+            				openapi_test.go:74
+Error:      	Expected value not to be nil.
+Test:       	TestVerifyDelete404ResponseCodeOnOrdersWithIDIsDefined
+Messages:   	404 response code should be defined
+WRONG ANSWER
+
+TestVerifyDelete204ResponseCodeOnOrdersWithIDIsDefined
+Output (stderr):
+openapi_tests_helpers.go:189: 
+Error Trace:	openapi_tests_helpers.go:189
+            				openapi_test.go:80
+Error:      	Expected value not to be nil.
+Test:       	TestVerifyDelete204ResponseCodeOnOrdersWithIDIsDefined
+Messages:   	204 response code should be defined
+WRONG ANSWER
+
+TestVerifyPost201ResponseCodeOnOrdersWithoutIDIsDefined
+Output (stderr):
+openapi_tests_helpers.go:182: 
+Error Trace:	openapi_tests_helpers.go:182
+            				openapi_test.go:86
+Error:      	Expected value not to be nil.
+Test:       	TestVerifyPost201ResponseCodeOnOrdersWithoutIDIsDefined
+Messages:   	201 response code should be defined
+WRONG ANSWER
+
+TestVerifyGet200ResponseCodeOnOrdersWithoutIDIsDefined
+Output (stderr):
+openapi_tests_helpers.go:175: 
+Error Trace:	openapi_tests_helpers.go:175
+            				openapi_test.go:92
+Error:      	Expected value not to be nil.
+Test:       	TestVerifyGet200ResponseCodeOnOrdersWithoutIDIsDefined
+Messages:   	200 response code should be defined
+WRONG ANSWER
+
+TestVerifyPutOnOrdersWithIDIsDefined
+OK
+
+TestVerifyDeleteOnOrdersWithIDIsDefined
+OK
+
+TestVerifyGet400ResponseCodeOnOrdersWithIDIsDefined
+Output (stderr):
+openapi_tests_helpers.go:149: 
+Error Trace:	openapi_tests_helpers.go:149
+            				openapi_test.go:107
+Error:      	Expected value not to be nil.
+Test:       	TestVerifyGet400ResponseCodeOnOrdersWithIDIsDefined
+Messages:   	GET method for endpoint with ID should be defined
+WRONG ANSWER
+
+TestVerifyDelete400ResponseCodeOnOrdersWithIDIsDefined
+Output (stderr):
+openapi_tests_helpers.go:196: 
+Error Trace:	openapi_tests_helpers.go:196
+            				openapi_test.go:114
+Error:      	Expected value not to be nil.
+Test:       	TestVerifyDelete400ResponseCodeOnOrdersWithIDIsDefined
+Messages:   	400 response code should be defined
+WRONG ANSWER
+
+TestVerifyPut400ResponseCodeOnOrdersWithIDIsDefined
+Output (stderr):
+openapi_tests_helpers.go:196: 
+Error Trace:	openapi_tests_helpers.go:196
+            				openapi_test.go:120
+Error:      	Expected value not to be nil.
+Test:       	TestVerifyPut400ResponseCodeOnOrdersWithIDIsDefined
+Messages:   	400 response code should be defined
+WRONG ANSWER
+
+TestVerifyPost400ResponseCodeOnOrdersWithoutIDIsDefined
+OK
+
+TestVerifyGet200ResponseContentTypeOnOrdersWithoutIDIsDefined
+Output (stderr):
+openapi_tests_helpers.go:175: 
+Error Trace:	openapi_tests_helpers.go:175
+            				openapi_test.go:132
+Error:      	Expected value not to be nil.
+Test:       	TestVerifyGet200ResponseContentTypeOnOrdersWithoutIDIsDefined
+Messages:   	200 response code should be defined
+WRONG ANSWER
+
+TestVerifyPost201ResponseContentTypeOnOrdersWithoutIDIsDefined
+Output (stderr):
+openapi_tests_helpers.go:182: 
+Error Trace:	openapi_tests_helpers.go:182
+            				openapi_test.go:139
+Error:      	Expected value not to be nil.
+Test:       	TestVerifyPost201ResponseContentTypeOnOrdersWithoutIDIsDefined
+Messages:   	201 response code should be defined
+WRONG ANSWER
+
+TestVerifyPost400ResponseContentTypeOnOrdersWithoutIDIsDefined
+OK
+
+TestVerifyPostRequestContentTypeOnOrdersWithoutIDIsDefined
+OK
+
+TestVerifyGet200ResponseContentTypeOnOrdersWithIDIsDefined
+Output (stderr):
+openapi_tests_helpers.go:149: 
+Error Trace:	openapi_tests_helpers.go:149
+            				openapi_test.go:158
+Error:      	Expected value not to be nil.
+Test:       	TestVerifyGet200ResponseContentTypeOnOrdersWithIDIsDefined
+Messages:   	GET method for endpoint with ID should be defined
+WRONG ANSWER
+
+TestVerifyGet404ResponseContentTypeOnOrdersWithIDIsDefined
+Output (stderr):
+openapi_tests_helpers.go:149: 
+Error Trace:	openapi_tests_helpers.go:149
+            				openapi_test.go:165
+Error:      	Expected value not to be nil.
+Test:       	TestVerifyGet404ResponseContentTypeOnOrdersWithIDIsDefined
+Messages:   	GET method for endpoint with ID should be defined
+WRONG ANSWER
+
+TestVerifyGet400ResponseContentTypeOnOrdersWithIDIsDefined
+Output (stderr):
+openapi_tests_helpers.go:149: 
+Error Trace:	openapi_tests_helpers.go:149
+            				openapi_test.go:172
+Error:      	Expected value not to be nil.
+Test:       	TestVerifyGet400ResponseContentTypeOnOrdersWithIDIsDefined
+Messages:   	GET method for endpoint with ID should be defined
+WRONG ANSWER
+
+TestVerifyDelete404ResponseContentTypeOnOrdersWithIDIsDefined
+Output (stderr):
+openapi_tests_helpers.go:168: 
+Error Trace:	openapi_tests_helpers.go:168
+            				openapi_test.go:180
+Error:      	Expected value not to be nil.
+Test:       	TestVerifyDelete404ResponseContentTypeOnOrdersWithIDIsDefined
+Messages:   	404 response code should be defined
+WRONG ANSWER
+
+TestVerifyDelete400ResponseContentTypeOnOrdersWithIDIsDefined
+Output (stderr):
+openapi_tests_helpers.go:196: 
+Error Trace:	openapi_tests_helpers.go:196
+            				openapi_test.go:187
+Error:      	Expected value not to be nil.
+Test:       	TestVerifyDelete400ResponseContentTypeOnOrdersWithIDIsDefined
+Messages:   	400 response code should be defined
+WRONG ANSWER
+
+TestVerifyPutRequestContentTypeOnOrdersWithIDIsDefined
+OK
+
+TestVerifyPut200ResponseContentTypeOnOrdersWithIDIsDefined
+Output (stderr):
+openapi_tests_helpers.go:175: 
+Error Trace:	openapi_tests_helpers.go:175
+            				openapi_test.go:200
+Error:      	Expected value not to be nil.
+Test:       	TestVerifyPut200ResponseContentTypeOnOrdersWithIDIsDefined
+Messages:   	200 response code should be defined
+WRONG ANSWER
+
+TestVerifyPut404ResponseContentTypeOnOrdersWithIDIsDefined
+Output (stderr):
+openapi_tests_helpers.go:168: 
+Error Trace:	openapi_tests_helpers.go:168
+            				openapi_test.go:207
+Error:      	Expected value not to be nil.
+Test:       	TestVerifyPut404ResponseContentTypeOnOrdersWithIDIsDefined
+Messages:   	404 response code should be defined
+WRONG ANSWER
+
+TestVerifyPut400ResponseContentTypeOnOrdersWithIDIsDefined
+Output (stderr):
+openapi_tests_helpers.go:196: 
+Error Trace:	openapi_tests_helpers.go:196
+            				openapi_test.go:214
+Error:      	Expected value not to be nil.
+Test:       	TestVerifyPut400ResponseContentTypeOnOrdersWithIDIsDefined
+Messages:   	400 response code should be defined
+WRONG ANSWER
+
+Detected some errors.
