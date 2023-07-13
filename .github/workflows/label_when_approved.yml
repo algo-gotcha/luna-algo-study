@@ -18,5 +18,5 @@ jobs:
       env:
         APPROVALS: "1"
         GITHUB_TOKEN: ${{ secrets.TOKEN }}
-        ADD_LABEL: "리뷰완료"
-        REMOVE_LABEL: "리뷰해주세요"
+        ADD_LABEL: "ADT"
+        REMOVE_LABEL: "bug"
